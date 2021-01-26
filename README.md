@@ -1,6 +1,6 @@
 # MagnonCRM
 
-###Main technology stack:
+### Main technology stack:
 - Java 11+
 - Spring boot 2.4.2
 - Gradle 6.8.1 (Kotlin DSL)
