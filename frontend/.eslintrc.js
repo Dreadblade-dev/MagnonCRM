@@ -10,5 +10,6 @@ module.exports = {
   rules: {
     semi: ['off', 'always'],
     quotes: ['error', 'single'],
+
   },
 }
