@@ -10,7 +10,12 @@ export default new VueRouter({
     {
       path: '/',
       name: 'Greeting',
-      component: () => import('@/components/Greeting'),
+      component: () => import('@/views/Greeting'),
     },
+    {
+      path: '/person',
+      name: 'Person',
+      component: () => import('@/views/Person')
+    }
   ],
 })

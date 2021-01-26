@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Greeting component123</h3>
+    <h3>Greeting component</h3>
     <p>Counter: {{ counter }}</p>
     <p>Username: {{ name }}</p>
   </div>
