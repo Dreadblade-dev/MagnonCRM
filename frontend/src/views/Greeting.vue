@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h3>Greeting component</h3>
+    <h1>Greeting component</h1>
     <p>Counter: {{ counter }}</p>
     <p>Username: {{ name }}</p>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Greeting',
   data: () => ({
@@ -15,7 +17,7 @@ export default {
   }),
   methods: {
     getGreeting() {
-      this.$axios
+      axios
         .get('/greeting', { params: { name: 'Anton' } })
         .then(response => {
           this.counter = response.data.id

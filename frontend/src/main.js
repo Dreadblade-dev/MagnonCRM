@@ -3,14 +3,18 @@ import App from '@/App.vue'
 import '@/registerServiceWorker'
 import router from '@/router'
 import store from '@/store'
-import axiosPlugin from '@/utils/api/axios.plugin'
+import axios from 'axios'
+
+require('@/store/subscriber')
+
+axios.defaults.baseURL = 'http://localhost:8080/api'
 
 Vue.config.productionTip = false
 
-Vue.use(axiosPlugin)
-
-new Vue({
-  router,
-  store,
-  render: h => h(App),
-}).$mount('#app')
+store.dispatch('auth/attempt', localStorage.getItem('token')).then(() => {
+  new Vue({
+    router,
+    store,
+    render: h => h(App),
+  }).$mount('#app')
+})

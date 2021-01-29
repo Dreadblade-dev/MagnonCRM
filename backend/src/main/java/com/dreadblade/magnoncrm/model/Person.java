@@ -1,6 +1,5 @@
 package com.dreadblade.magnoncrm.model;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

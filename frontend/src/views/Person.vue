@@ -8,20 +8,16 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Person',
   data: () => ({
     persons: [],
   }),
-  mounted() {
-    this.$axios
-      .get('/persons')
-      .then(response => {
-        this.persons = response.data
-      })
-      .catch(error => {
-        console.log('[Error]: ', error.response.data)
-      })
+  async mounted() {
+    const response = await axios.get('/persons')
+    this.persons = response.data
   },
 }
 </script>
