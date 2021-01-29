@@ -53,7 +53,7 @@ export default {
     signOut() {
       this.signOutAction().then(() => {
         this.$router.replace({
-          name: 'Greeting',
+          name: 'SignIn',
         })
       })
     },

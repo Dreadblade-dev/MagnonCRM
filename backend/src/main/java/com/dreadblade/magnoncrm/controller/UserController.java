@@ -37,8 +37,8 @@ public class UserController {
 
     @PostMapping("/signout")
     @PreAuthorize("hasRole('ADMIN') or hasRole('CLIENT')")
-    public String signOut(HttpServletRequest request) {
-        return userService.refresh(request.getRemoteUser());
+    public String signOut() {
+        return "signed out";
     }
 
     @DeleteMapping(value = "/{username}")
